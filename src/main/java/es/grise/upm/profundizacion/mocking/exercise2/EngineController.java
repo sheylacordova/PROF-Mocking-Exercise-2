@@ -18,7 +18,7 @@ public class EngineController {
 	
 	
 	// Constructor, with dependency injection
-	EngineController(Logger logger, Speedometer speedometer, Gearbox gearbox, Time time) {
+	public EngineController(Logger logger, Speedometer speedometer, Gearbox gearbox, Time time) {
 		this.logger = logger;
 		this.speedometer = speedometer;
 		this.gearbox = gearbox;
@@ -32,7 +32,7 @@ public class EngineController {
 	 *
 	 * Logs the changes
 	 */
-	void recordGear(GearValues newGear) {
+	public void recordGear(GearValues newGear) {
 		
 		logger.log(sdf.format(time.getCurrentTime()) + " Gear changed to " + newGear);
 	
@@ -45,7 +45,7 @@ public class EngineController {
 	 *
 	 * Reads the speed three times to calculate an average speed
 	 */
-	double getInstantaneousSpeed() {
+	public double getInstantaneousSpeed() {
 		
 		double speed = 0;
 		
@@ -86,4 +86,5 @@ public class EngineController {
 		setGear(newGear);
 		recordGear(newGear);
 	}
+	
 }

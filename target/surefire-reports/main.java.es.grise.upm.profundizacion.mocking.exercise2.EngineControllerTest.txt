@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: main.java.es.grise.upm.profundizacion.mocking.exercise2.EngineControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.166 s <<< FAILURE! - in main.java.es.grise.upm.profundizacion.mocking.exercise2.EngineControllerTest
+testRecordGear  Time elapsed: 1.141 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: interface es.grise.upm.profundizacion.mocking.exercise2.Logger.
+
+If you're not sure why you're getting this error, please open an issue on GitHub.
+
+
+Java               : 23
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 23.0.1+11-39
+JVM name           : Java HotSpot(TM) 64-Bit Server VM
+JVM version        : 23.0.1+11-39
+JVM info           : mixed mode, sharing
+OS name            : Windows 11
+OS version         : 10.0
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [interface es.grise.upm.profundizacion.mocking.exercise2.Logger]
+	at main.java.es.grise.upm.profundizacion.mocking.exercise2.EngineControllerTest.setup(EngineControllerTest.java:36)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [interface es.grise.upm.profundizacion.mocking.exercise2.Logger]
+	at main.java.es.grise.upm.profundizacion.mocking.exercise2.EngineControllerTest.setup(EngineControllerTest.java:36)
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at main.java.es.grise.upm.profundizacion.mocking.exercise2.EngineControllerTest.setup(EngineControllerTest.java:36)
+Caused by: java.lang.IllegalArgumentException: Java 23 (67) is not supported by the current version of Byte Buddy which officially supports Java 22 (66) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+	at main.java.es.grise.upm.profundizacion.mocking.exercise2.EngineControllerTest.setup(EngineControllerTest.java:36)
+
